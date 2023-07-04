@@ -6,6 +6,9 @@ const fileUpload = require("express-fileupload");
 
 const errorMiddleware = require("./middleware/error");
 
+const cors = require('cors');
+app.use(cors({origin: '*'}));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
