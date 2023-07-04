@@ -4,7 +4,7 @@ const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({origin: '*'}));
 
 // Handling Uncaught Exception
 process.on("uncaughtException", (err) => {
